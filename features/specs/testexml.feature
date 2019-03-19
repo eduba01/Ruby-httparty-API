@@ -1,10 +1,10 @@
 #language: pt
 #utf-8
-@testeXML
+@testexml
 	Funcionalidade: teste de XML
 		Eu como usuario
-		Quero acessar as informações contidas na página de Overview
-		Para validar os dados da tela
+		Quero validar a API de CupomDU 
+		Para validar o status code e XML de resposta
 
 @positivo @regressao @EmAndamento12
 	Esquema do Cenário: WSDL POST like using Rest

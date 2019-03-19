@@ -467,29 +467,576 @@ function makeRed(element_id) {
 function makeYellow(element_id) {
   $('#'+element_id).css('background', '#FAF834');
   $('#'+element_id).css('color', '#000000');
-}</script></head><body><!-- Step count 0--><div class="cucumber"><div id="cucumber-header"><div id="label"><h1>Cucumber Features</h1></div><div id="summary"><p id="totals"></p><p id="duration"></p><div id="expand-collapse"><p id="expander">Expand All</p><p id="collapser">Collapse All</p></div></div></div><div class="feature"><pre class="comment"># language: pt<br/>#utf-8<br/></pre><span class="tag">@testeXML</span><h2><span class="val">Funcionalidade: teste de XML</span></h2><p class="narrative">Eu como usuario<br/>Quero acessar as informações contidas na página de Overview<br/>Para validar os dados da tela<br/></p><div class='scenario outline'><span class="tag">@positivo</span> <span class="tag">@regressao</span> <span class="tag">@EmAndamento12</span><span class="scenario_file">features/specs/testexml.feature:10</span><h3 id="scenario_1"><span class="keyword">Esquema do Cenário:</span> <span class="val">WSDL POST like using Rest</span></h3><ol><li id='' class='step skipped'><div class="step_name"><span class="keyword">Dado </span><span class="step val">um WSDL request</span></div><div class="step_file"><span>features/specs/testexml.feature:11</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step skipped'><div class="step_name"><span class="keyword">Quando </span><span class="step val">eu enviar parametros com o metodo post e texto com XML</span></div><div class="step_file"><span>features/specs/testexml.feature:12</span></div><table><tr class='step' id='row_13'><td id="row_13_0" class="step skipped"><div><span class="step param">cep</span></div></td><td id="row_13_1" class="step skipped"><div><span class="step param">&lt;cep&gt;</span></div></td></tr> <script type="text/javascript">moveProgressBar('100.0');</script><tr class='step' id='row_14'><td id="row_14_0" class="step skipped"><div><span class="step param">user</span></div></td><td id="row_14_1" class="step skipped"><div><span class="step param">&lt;user&gt;</span></div></td></tr> <script type="text/javascript">moveProgressBar('100.0');</script><tr class='step' id='row_15'><td id="row_15_0" class="step skipped"><div><span class="step param">password</span></div></td><td id="row_15_1" class="step skipped"><div><span class="step param">&lt;password&gt;</span></div></td></tr> <script type="text/javascript">moveProgressBar('100.0');</script></table></li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step skipped'><div class="step_name"><span class="keyword">Então </span><span class="step val">o &lt;status_code&gt; deve retornar 200</span></div><div class="step_file"><span>features/specs/testexml.feature:16</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script></ol><div class="examples"><h4><span class="keyword">Exemplos</span> <span class="val"></span></h4><table><tr class='step' id='features_specs_testexml_feature_19'><th id="features_specs_testexml_feature_19_0" class="step skipped_param"><div><span class="step param">cep</span></div></th><th id="features_specs_testexml_feature_19_1" class="step skipped_param"><div><span class="step param">user</span></div></th><th id="features_specs_testexml_feature_19_2" class="step skipped_param"><div><span class="step param">password</span></div></th><th id="features_specs_testexml_feature_19_3" class="step skipped_param"><div><span class="step param">status_code</span></div></th></tr> <script type="text/javascript">moveProgressBar('100.0');</script><tr class='step' id='features_specs_testexml_feature_20'><td id="features_specs_testexml_feature_20_0" class="step passed"><div><span class="step param">04548005</span></div></td><td id="features_specs_testexml_feature_20_1" class="step passed"><div><span class="step param">&lt;user&gt;</span></div></td><td id="features_specs_testexml_feature_20_2" class="step passed"><div><span class="step param">&lt;password&gt;</span></div></td><td id="features_specs_testexml_feature_20_3" class="step passed"><div><span class="step param">200</span></div></td><td class="message">
- ... 
-, 
- Printing body 
-, cupom_xml_payload: 
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:coup="http://www.accurate.com/acec/AcecSOAIntegration/CouponDuServices">
-    <soapenv:Header/>
-    <soapenv:Body>
-       <coup:integrateCouponDuRequest>
-          <coup:range>
-             <coup:QT>10</coup:QT>
-             <coup:RI>0</coup:RI>
-             <coup:RF>99</coup:RF>
-          </coup:range>
-          <!--Optional:-->
-          <coup:storeId>TRESC</coup:storeId>
-          <!--Optional:-->
-          <coup:couponId>?</coup:couponId>
-       </coup:integrateCouponDuRequest>
-    </soapenv:Body>
- </soapenv:Envelope>, 
+}</script></head><body><!-- Step count 0--><div class="cucumber"><div id="cucumber-header"><div id="label"><h1>Cucumber Features</h1></div><div id="summary"><p id="totals"></p><p id="duration"></p><div id="expand-collapse"><p id="expander">Expand All</p><p id="collapser">Collapse All</p></div></div></div><div class="feature"><pre class="comment"># language: pt<br/></pre><h2><span class="val">Funcionalidade: Apenas um cenario</span></h2><p class="narrative"></p><div class='scenario'><span class="tag">@get</span><span class="scenario_file">features/specs/teste.feature:5</span><h3 id="scenario_1"><span class="keyword">Cenario:</span> <span class="val">Get Simples</span></h3><ol><li id='' class='step passed'><div class="step_name"><span class="keyword">Dado </span><span class="step val">que eu queira recuperar um post</span></div><div class="step_file"><span>features/step_definitions/teste.rb:27</span></div></li><li class="step message">INICIANDO RECUPERAÇÃO DO POST, ID 2</li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step passed'><div class="step_name"><span class="keyword">Quando </span><span class="step val">o método for get com um id existente</span></div><div class="step_file"><span>features/step_definitions/teste.rb:31</span></div></li><li class="step message">
 
-Resposta do status code: 200, , 
+PRINTANDO ENPOINT
 
-Resposta do body: 
-, <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing"><env:Header><wsa:MessageID>urn:064FDB904A4011E9BFD247E16B9E5DAA</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address><wsa:ReferenceParameters><instra:tracking.ecid xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">c5dd7fd9e15a4df8:1dbe59aa:16988af21ad:-8000-0000000000222a8c</instra:tracking.ecid></wsa:ReferenceParameters></wsa:ReplyTo><wsa:FaultTo><wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address><wsa:ReferenceParameters><instra:tracking.ecid xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">c5dd7fd9e15a4df8:1dbe59aa:16988af21ad:-8000-0000000000222a8c</instra:tracking.ecid></wsa:ReferenceParameters></wsa:FaultTo></env:Header><env:Body><integrateCouponDuResponse xmlns="http://www.accurate.com/acec/AcecSOAIntegration/CouponDuServices"/></env:Body></env:Envelope></td></tr> <script type="text/javascript">moveProgressBar('100.0');</script></table></div></div></div><script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0m0.313s seconds</strong>";</script><script type="text/javascript">document.getElementById('totals').innerHTML = "1 scenario (1 passed)<br />3 steps (3 passed)";</script></div></body></html>
+</li><li class="step message">http://ad-mercatto-hcp.infracommerce.com.br/soa-infra/services/default/CouponServices/CouponDuServices</li><li class="step message">
+
+IMPRIMINDO RESULTADO DA CONSULTA
+
+</li><li class="step message"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>/services Web Service</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css" media="screen">A:link { font-family: Arial, Helvetica, sans-serif; color:#663300; background-color : #FFFFFF;}
+A:active { font-family: Arial, Helvetica, sans-serif; color:#ff6600; background-color : #FFFFFF;}
+A:visited { font-family: Arial, Helvetica, sans-serif; color:#996633; background-color : #FFFFFF;}
+A.navigation:link{font-family: Arial, Helvetica, sans-serif;font-size:65%;color:#996633;background-color : #FFFFFF;}
+A.navigation:active{ font-family: Arial, Helvetica, sans-serif; font-size:65%; color:#996633; background-color : #FFFFFF;}
+A.navigation:visited{ font-family: Arial, Helvetica, sans-serif; font-size:65%; color:#996633; background-color : #FFFFFF;}
+BODY, P, LI, UL, OL { font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#000000; background-color : #FFFFFF;}
+H1 { font-family: Arial, Helvetica, sans-serif; font-size:150%; color:#336699; background-color : #FFFFFF; border : solid #CCCC99; border-width : 0px 0px 2px 0px; width : 100%;}
+H2 {font-family: Arial, Helvetica, sans-serif; font-size:120%; color:#336699; background-color : #FFFFFF; border : solid #cccc99; border-width : 0px 0px 2px 0px; width : 100%;}
+H3 {font-family: Arial, Helvetica, sans-serif;font-size:110%;color:#336699;background-color : #FFFFFF;width : 100%;}
+H4 {font-family: Arial, Helvetica, sans-serif;font-size:10pt;color:#000000;background-color : #FFFFFF;font-weight: bold;width : 100%;}
+P.indent {text-indent: 9%;}
+
+.testpage-message-body-editor { margin: 10 0 10px 10px; font-size: 12px; }
+
+.testpage-complex-editor { margin: 10 0 0 10px; font-size: 12px;}
+
+.testpage-complex-editor-body { margin: 10 0 0 10px; }
+
+.testpage-complex-editor-part {	margin: 10 10 0 10px; }
+
+.testpage-header-editor { margin: 10 0 30 10px; font-size: 12px; }
+
+.testpage-header-editor-part { margin: 0 0 10 0px; font-size: 12px; }
+
+.testpage-simpletype-type-tag  { color: rgb(128, 0, 128); padding: 0px;	font-size: 12px; margin: 0 2 0 10px; }
+
+.testpage-simpletype-tag {color: blue; font-size: 12px; margin: 0 6 0 2px; text-align:right; }
+
+.testpage-complextype-tag  {color: black; font-size: 12px; font-weight: bold;}
+
+.testpage-input {font-size: 12px; text-align:left; }
+
+.testpage-input-box {border: 1px solid dimgray; font-size: 12px; text-align:left;}
+
+.testpage-dropdown { font-size: 12px;}
+
+.testpage-dropdown-box {font-size: 12px;}
+
+.testpage-arraytype-tag {color: black; font-size: 12px; font-weight: bold;}
+
+.testpage-array-element-tag { margin: 0 0 0 10px; }
+
+.testpage-array-element { margin : 10px; background-color: #FFFFFF; background-image: url("med_sub_BG.gif"); }
+
+.testpage-arraytype-adder { font-size: 12px; }
+
+.testpage-checkbox { height: 12px; width: 12px; margin: 2 2 3 0px; }
+
+table {border-spacing: 0;}
+
+td {padding: 1px 4px 1px 4px; width: 130px; }
+
+.testpage-invocation-textarea { margin: 10px 0 0 10px; font-size: 12px; border-top: solid #95b7cd 1px;
+     border-left: solid #95b7cd 1px; border-bottom: solid #95b7cd 1px; border-right: solid #95b7cd 1px; }
+
+.testpage-invocation-button { margin: 10px 0 10px 150px; font-size: 12px;}
+
+.testpage-array-remove { background-image: url(http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?tp_delete_png);  background-repeat: no-repeat; clear: both; display: inline-block; }
+
+.testpage-array-add { background-image: url(http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?tp_add_png);  background-repeat: no-repeat; clear: both; display: block; position: relative; left: 1px}
+
+.xmlViewer {font-family: monospace; height: 300px; width: 95%; overflow: auto; position: relative; left:0px;}
+
+.xmlViewer2 {font-family: monospace; height: 85%; width: 95%; overflow: auto; position: relative; left:0px;}
+
+.xmlTag {color: #336699; background-color: transparent; font-weight: bold;}
+
+.xmlAttName {color: #990000; background-color: transparent}
+
+.xmlAttEqual {color: #006699; background-color: transparent}
+
+.xmlAttValue {color: #0033cc; background-color: transparent}
+
+.mode-select { margin: 0 0 0 10px;}
+
+.extras { margin: 10px 0 0 0px; font-size: 12px; }
+
+.expander-open {background-image: url(http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?tp_disclosure_expanded_png); background-repeat: no-repeat; background-position: center; display:inline-block;}
+
+.expander-closed { background-image: url(http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?tp_disclosure_collapsed_png); background-repeat: no-repeat; background-position: center; display:inline-block;}
+
+div.bar {width:85%; padding-left:15px; border-color: rgb(128,128,128);border-width: 0px 0px 1px 0px ; border-style:solid; line-height: 0}
+
+div.container {position:relative; border-width:1px; border:solid #95b7cd 2px; margin-top:20px;padding-top:20px}
+
+div.operation {position:absolute; top:-12px; left:40px; background-color:white}
+
+a .alt { visibility: hidden; position: relative; left: -4px; }
+</style>
+</head><body onLoad="javascript:buildEditor()">
+<h1>CouponDuServices endpoint</h1>
+<p>For a formal definition, please review the <a href="/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?WSDL"> Service Description </a>.</p><p> Download the JavaScript Stub (<i>BETA</i>) for <a href="/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?FabricProviderServletstub.js">CouponDuServices_pt</a>  and see its <a href="/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?FabricProviderServletstub.html">  documentation  </a>.</p>
+<p>A list of all imported WSDL and Schema documents may be found <a href="/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?XSD&xsdlist"> here </a></p>
+<script type="text/javascript" src="http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?FabricProviderServlettest_en.js"></script>
+<script type="text/javascript">
+    // Copyright © 2003, 2011, Oracle and/or its affiliates. All rights reserved.
+
+    function switchOperation(selection) {
+        submit_to_self();
+    }
+
+    function switchMode(newMode) {
+        submit_to_self();
+    }
+
+    function submit_to_self() {
+        var f = document.forms['CreateMessage'];
+        f.action = "/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices";
+        f.submit();
+    }
+
+    function switchModeNoValidate(newMode) {
+        submit_to_self_no_validate();
+    }
+
+    function submit_to_self_no_validate() {
+        var f = document.forms['CreateMessage'];
+        f.action = "/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices";
+        f.onSubmit = "javascript: return beforeSubmitNoValidate(this); ";
+        f.submit();
+    }
+
+    function toggleHttpParams(transBox) {
+        var transportParams = document.getElementById("http-params");
+        if (transBox.checked) {
+            transportParams.style.display = "block";
+        } else {
+            transportParams.style.display = "none";
+        }
+    }
+
+    function handleStressInfo( stressCheckBox ) {
+        var initiateForm = document.forms['CreateMessage'];
+
+        if( stressCheckBox.checked ) {
+            // User is requesting stress test
+            // change the address of the form
+            initiateForm.action = "/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?stressTest=";
+        } else {
+            // The user does not want a stress test
+            // change the address of the form
+            initiateForm.action = "/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices";
+        }
+    }
+
+    function buildEditor() {
+
+        var wsm_interceptors = [];
+        wsm_interceptors[0] = "security";
+        var node = document.getElementById("editor");
+        var editor = findEditors("integrateCouponDu", wsm_interceptors, true);
+        editor.build(node);
+        syncFormRadioField('mode_html', true);
+        syncFormRadioField('mode_xml', false);
+        syncFormSelectField('operationName', 'integrateCouponDu,,');
+
+        var soapAction = document.getElementById("soapAction");
+        soapAction.value = "integrateCouponDu";
+        var soapAction_cb = document.getElementById("soapAction_cb");
+        soapAction_cb.checked = "true";
+    }
+    function actionBeforeSubmit(form) {
+        if (!validateAllAtomicInputs(form)) return false;
+        if (form.transport_enablement.checked && form.stress.checked) {
+            var userName =  form.form_user.value;
+            var password =  form.form_password.value;
+            var xmlHttpReq = false;
+            if (window.XMLHttpRequest) {
+                xmlHttpReq = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlHttpReq.open("POST", "http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?stressTest=", false, userName, password);
+            xmlHttpReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xmlHttpReq.send("");
+        }
+        return true;
+    }
+    function beforeSubmitNoValidate(form) {
+        if (form.transport_enablement.checked && form.stress.checked) {
+            var userName =  form.form_user.value;
+            var password =  form.form_password.value;
+            var xmlHttpReq = false;
+            if (window.XMLHttpRequest) {
+                xmlHttpReq = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlHttpReq.open("POST", "http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?stressTest=", false, userName, password);
+            xmlHttpReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xmlHttpReq.send("");
+        }
+        return true;
+    }
+</script>
+
+<h2>CouponDuServices_pt</h2>
+<form name="CreateMessage" action='/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?invoke=' method="POST" onSubmit="javascript: return actionBeforeSubmit(this); ">
+<input type="hidden" name="contentType" value="text/xml" >
+<input type="hidden" name="portName" value="CouponDuServices_pt" >
+<input type="hidden" name="serviceName" value="CouponDuServices" >
+<input type="hidden" name="serviceNamespace" value="http://www.accurate.com/acec/AcecSOAIntegration/CouponDuServices" >
+<div class="container">
+<div id="mode-select" class="operation">
+Operation
+: <span id="operationSelect">
+              <select class="testpage-input-box" id="operationName" name="operationName"
+                      onchange="switchOperation( this.value ); return true;">
+ <option value="integrateCouponDu,," SELECTED>integrateCouponDu</option> <option value="integrateUsage,,">integrateUsage</option></select>
+</span>
+<input type="hidden" name="_oracle_jrf_testpage_identification_var" value="_oracle_jrf">
+&nbsp;&nbsp;&nbsp;<span style="align: right" class="testpage-edit-modes">
+<input id="mode_html" name="mode" type="radio" onclick="switchMode( this.value ); return true;"
+     VALUE="html" Checked />
+HTML Form</span>
+  <input id="mode_xml" name="mode" type="radio" onclick="switchModeNoValidate( this.value ); return true;"
+     VALUE="xml" />
+XML Source
+&nbsp;
+</div>
+<div id="editor"></div>
+</div>
+<div>
+       <p><i>Note: XML source view contents will not be reflected in the HTML form view</i></p>
+</div>
+<br/>
+<div class="extras">
+    <label>
+        <span><a class="expander-closed" id="tp_http_transport" href="javascript:toggleExpand('http-params','tp_http_transport')"><span class="alt">---</span></a></span>
+
+        <span>Show Transport Info</span>
+          </label>
+
+
+
+    <div id="http-params" class="extras" style="font-size:12px;padding-left:20px;display:none">
+        <table><tr>
+            <td class="testpage-input">HTTP Authentication
+            </td><td class="testpage-input"><input type="checkbox" class="testpage-checkbox" name="transport_enablement" style="font-size:12px; margin-left:10px"> Enable
+            </td>
+        </tr><tr><td>
+            <table><tr><td class="testpage-input">
+User Name</td><td><input class="testpage-input-box"
+                                                                                           type="text"
+                                                                                           name="form_user"/></td>
+            </tr>
+                <tr><td class="testpage-input">
+Password</td><td><input class="testpage-input-box"
+                                                                                              type="password"
+                                                                                              name="form_password"/>
+                </td></tr>
+            </table>
+        </td></tr>
+        </table>
+
+
+        <div id="soap-action" class="extras">
+            <label>
+                &nbsp; SOAP Action &nbsp;
+            </label>
+        <span id="testpage-soap-action" class="extras">
+            <input class="testpage-input-box" type="text" id="soapAction" name="soapAction" size="35"/>
+        </span>
+           <span><input type="checkbox" class="testpage-checkbox" name="soapAction_cb" id="soapAction_cb"
+                   onclick="javascript:toggleDisabled(this, 'soapAction')" style="font-size:12px; margin-left:10px"/> Enable</span>
+
+        </div>
+    </div>
+</div>
+<input type="hidden" name="security" value="true"/>
+<br/>
+<input align="right" name="invokeMessage" type="submit" value="Invoke" class="button"/><div id="validation_error_message"></div>
+</form>
+<h2>&nbsp;</h2>
+<p><font face="Arial" size="1">Copyright &copy; 2003, 2011, Oracle and/or its affiliates. All rights reserved.</font></p>
+</body></html>
+</li><li class="step message">200</li><li class="step message">ok</li> <script type="text/javascript">moveProgressBar('100.0');</script><script>makeRed('cucumber-header');makeRed('scenario_1');</script><li id='' class='step failed'><div class="step_name"><span class="keyword">Então </span><span class="step val">me retorna o status 200 com o response body equivalente</span></div><div class="step_file"><span>features/step_definitions/teste.rb:36</span></div><div class="message"><pre>743: unexpected token at '&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;/services Web Service&lt;/title&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;style type="text/css" media="screen"&gt;A:link { font-family: Arial, Helvetica, sans-serif; color:#663300; background-color : #FFFFFF;}
+A:active { font-family: Arial, Helvetica, sans-serif; color:#ff6600; background-color : #FFFFFF;}
+A:visited { font-family: Arial, Helvetica, sans-serif; color:#996633; background-color : #FFFFFF;}
+A.navigation:link{font-family: Arial, Helvetica, sans-serif;font-size:65%;color:#996633;background-color : #FFFFFF;}
+A.navigation:active{ font-family: Arial, Helvetica, sans-serif; font-size:65%; color:#996633; background-color : #FFFFFF;}
+A.navigation:visited{ font-family: Arial, Helvetica, sans-serif; font-size:65%; color:#996633; background-color : #FFFFFF;}
+BODY, P, LI, UL, OL { font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#000000; background-color : #FFFFFF;}
+H1 { font-family: Arial, Helvetica, sans-serif; font-size:150%; color:#336699; background-color : #FFFFFF; border : solid #CCCC99; border-width : 0px 0px 2px 0px; width : 100%;}
+H2 {font-family: Arial, Helvetica, sans-serif; font-size:120%; color:#336699; background-color : #FFFFFF; border : solid #cccc99; border-width : 0px 0px 2px 0px; width : 100%;}
+H3 {font-family: Arial, Helvetica, sans-serif;font-size:110%;color:#336699;background-color : #FFFFFF;width : 100%;}
+H4 {font-family: Arial, Helvetica, sans-serif;font-size:10pt;color:#000000;background-color : #FFFFFF;font-weight: bold;width : 100%;}
+P.indent {text-indent: 9%;}
+
+.testpage-message-body-editor { margin: 10 0 10px 10px; font-size: 12px; }
+
+.testpage-complex-editor { margin: 10 0 0 10px; font-size: 12px;}
+
+.testpage-complex-editor-body { margin: 10 0 0 10px; }
+
+.testpage-complex-editor-part {	margin: 10 10 0 10px; }
+
+.testpage-header-editor { margin: 10 0 30 10px; font-size: 12px; }
+
+.testpage-header-editor-part { margin: 0 0 10 0px; font-size: 12px; }
+
+.testpage-simpletype-type-tag  { color: rgb(128, 0, 128); padding: 0px;	font-size: 12px; margin: 0 2 0 10px; }
+
+.testpage-simpletype-tag {color: blue; font-size: 12px; margin: 0 6 0 2px; text-align:right; }
+
+.testpage-complextype-tag  {color: black; font-size: 12px; font-weight: bold;}
+
+.testpage-input {font-size: 12px; text-align:left; }
+
+.testpage-input-box {border: 1px solid dimgray; font-size: 12px; text-align:left;}
+
+.testpage-dropdown { font-size: 12px;}
+
+.testpage-dropdown-box {font-size: 12px;}
+
+.testpage-arraytype-tag {color: black; font-size: 12px; font-weight: bold;}
+
+.testpage-array-element-tag { margin: 0 0 0 10px; }
+
+.testpage-array-element { margin : 10px; background-color: #FFFFFF; background-image: url("med_sub_BG.gif"); }
+
+.testpage-arraytype-adder { font-size: 12px; }
+
+.testpage-checkbox { height: 12px; width: 12px; margin: 2 2 3 0px; }
+
+table {border-spacing: 0;}
+
+td {padding: 1px 4px 1px 4px; width: 130px; }
+
+.testpage-invocation-textarea { margin: 10px 0 0 10px; font-size: 12px; border-top: solid #95b7cd 1px;
+     border-left: solid #95b7cd 1px; border-bottom: solid #95b7cd 1px; border-right: solid #95b7cd 1px; }
+
+.testpage-invocation-button { margin: 10px 0 10px 150px; font-size: 12px;}
+
+.testpage-array-remove { background-image: url(http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?tp_delete_png);  background-repeat: no-repeat; clear: both; display: inline-block; }
+
+.testpage-array-add { background-image: url(http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?tp_add_png);  background-repeat: no-repeat; clear: both; display: block; position: relative; left: 1px}
+
+.xmlViewer {font-family: monospace; height: 300px; width: 95%; overflow: auto; position: relative; left:0px;}
+
+.xmlViewer2 {font-family: monospace; height: 85%; width: 95%; overflow: auto; position: relative; left:0px;}
+
+.xmlTag {color: #336699; background-color: transparent; font-weight: bold;}
+
+.xmlAttName {color: #990000; background-color: transparent}
+
+.xmlAttEqual {color: #006699; background-color: transparent}
+
+.xmlAttValue {color: #0033cc; background-color: transparent}
+
+.mode-select { margin: 0 0 0 10px;}
+
+.extras { margin: 10px 0 0 0px; font-size: 12px; }
+
+.expander-open {background-image: url(http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?tp_disclosure_expanded_png); background-repeat: no-repeat; background-position: center; display:inline-block;}
+
+.expander-closed { background-image: url(http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?tp_disclosure_collapsed_png); background-repeat: no-repeat; background-position: center; display:inline-block;}
+
+div.bar {width:85%; padding-left:15px; border-color: rgb(128,128,128);border-width: 0px 0px 1px 0px ; border-style:solid; line-height: 0}
+
+div.container {position:relative; border-width:1px; border:solid #95b7cd 2px; margin-top:20px;padding-top:20px}
+
+div.operation {position:absolute; top:-12px; left:40px; background-color:white}
+
+a .alt { visibility: hidden; position: relative; left: -4px; }
+&lt;/style&gt;
+&lt;/head&gt;&lt;body onLoad="javascript:buildEditor()"&gt;
+&lt;h1&gt;CouponDuServices endpoint&lt;/h1&gt;
+&lt;p&gt;For a formal definition, please review the &lt;a href="/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?WSDL"&gt; Service Description &lt;/a&gt;.&lt;/p&gt;&lt;p&gt; Download the JavaScript Stub (&lt;i&gt;BETA&lt;/i&gt;) for &lt;a href="/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?FabricProviderServletstub.js"&gt;CouponDuServices_pt&lt;/a&gt;  and see its &lt;a href="/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?FabricProviderServletstub.html"&gt;  documentation  &lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A list of all imported WSDL and Schema documents may be found &lt;a href="/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?XSD&amp;xsdlist"&gt; here &lt;/a&gt;&lt;/p&gt;
+&lt;script type="text/javascript" src="http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?FabricProviderServlettest_en.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    // Copyright © 2003, 2011, Oracle and/or its affiliates. All rights reserved.
+
+    function switchOperation(selection) {
+        submit_to_self();
+    }
+
+    function switchMode(newMode) {
+        submit_to_self();
+    }
+
+    function submit_to_self() {
+        var f = document.forms['CreateMessage'];
+        f.action = "/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices";
+        f.submit();
+    }
+
+    function switchModeNoValidate(newMode) {
+        submit_to_self_no_validate();
+    }
+
+    function submit_to_self_no_validate() {
+        var f = document.forms['CreateMessage'];
+        f.action = "/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices";
+        f.onSubmit = "javascript: return beforeSubmitNoValidate(this); ";
+        f.submit();
+    }
+
+    function toggleHttpParams(transBox) {
+        var transportParams = document.getElementById("http-params");
+        if (transBox.checked) {
+            transportParams.style.display = "block";
+        } else {
+            transportParams.style.display = "none";
+        }
+    }
+
+    function handleStressInfo( stressCheckBox ) {
+        var initiateForm = document.forms['CreateMessage'];
+
+        if( stressCheckBox.checked ) {
+            // User is requesting stress test
+            // change the address of the form
+            initiateForm.action = "/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?stressTest=";
+        } else {
+            // The user does not want a stress test
+            // change the address of the form
+            initiateForm.action = "/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices";
+        }
+    }
+
+    function buildEditor() {
+
+        var wsm_interceptors = [];
+        wsm_interceptors[0] = "security";
+        var node = document.getElementById("editor");
+        var editor = findEditors("integrateCouponDu", wsm_interceptors, true);
+        editor.build(node);
+        syncFormRadioField('mode_html', true);
+        syncFormRadioField('mode_xml', false);
+        syncFormSelectField('operationName', 'integrateCouponDu,,');
+
+        var soapAction = document.getElementById("soapAction");
+        soapAction.value = "integrateCouponDu";
+        var soapAction_cb = document.getElementById("soapAction_cb");
+        soapAction_cb.checked = "true";
+    }
+    function actionBeforeSubmit(form) {
+        if (!validateAllAtomicInputs(form)) return false;
+        if (form.transport_enablement.checked &amp;&amp; form.stress.checked) {
+            var userName =  form.form_user.value;
+            var password =  form.form_password.value;
+            var xmlHttpReq = false;
+            if (window.XMLHttpRequest) {
+                xmlHttpReq = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlHttpReq.open("POST", "http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?stressTest=", false, userName, password);
+            xmlHttpReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xmlHttpReq.send("");
+        }
+        return true;
+    }
+    function beforeSubmitNoValidate(form) {
+        if (form.transport_enablement.checked &amp;&amp; form.stress.checked) {
+            var userName =  form.form_user.value;
+            var password =  form.form_password.value;
+            var xmlHttpReq = false;
+            if (window.XMLHttpRequest) {
+                xmlHttpReq = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlHttpReq.open("POST", "http://ad-mercatto-hcp.infracommerce.com.br:80/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?stressTest=", false, userName, password);
+            xmlHttpReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xmlHttpReq.send("");
+        }
+        return true;
+    }
+&lt;/script&gt;
+
+&lt;h2&gt;CouponDuServices_pt&lt;/h2&gt;
+&lt;form name="CreateMessage" action='/soa-infra/services/default/CouponServices!1.0*soa_0054ada7-8ef0-476f-99aa-bcf515968c55/CouponDuServices?invoke=' method="POST" onSubmit="javascript: return actionBeforeSubmit(this); "&gt;
+&lt;input type="hidden" name="contentType" value="text/xml" &gt;
+&lt;input type="hidden" name="portName" value="CouponDuServices_pt" &gt;
+&lt;input type="hidden" name="serviceName" value="CouponDuServices" &gt;
+&lt;input type="hidden" name="serviceNamespace" value="http://www.accurate.com/acec/AcecSOAIntegration/CouponDuServices" &gt;
+&lt;div class="container"&gt;
+&lt;div id="mode-select" class="operation"&gt;
+Operation
+: &lt;span id="operationSelect"&gt;
+              &lt;select class="testpage-input-box" id="operationName" name="operationName"
+                      onchange="switchOperation( this.value ); return true;"&gt;
+ &lt;option value="integrateCouponDu,," SELECTED&gt;integrateCouponDu&lt;/option&gt; &lt;option value="integrateUsage,,"&gt;integrateUsage&lt;/option&gt;&lt;/select&gt;
+&lt;/span&gt;
+&lt;input type="hidden" name="_oracle_jrf_testpage_identification_var" value="_oracle_jrf"&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="align: right" class="testpage-edit-modes"&gt;
+&lt;input id="mode_html" name="mode" type="radio" onclick="switchMode( this.value ); return true;"
+     VALUE="html" Checked /&gt;
+HTML Form&lt;/span&gt;
+  &lt;input id="mode_xml" name="mode" type="radio" onclick="switchModeNoValidate( this.value ); return true;"
+     VALUE="xml" /&gt;
+XML Source
+&amp;nbsp;
+&lt;/div&gt;
+&lt;div id="editor"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+       &lt;p&gt;&lt;i&gt;Note: XML source view contents will not be reflected in the HTML form view&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;div class="extras"&gt;
+    &lt;label&gt;
+        &lt;span&gt;&lt;a class="expander-closed" id="tp_http_transport" href="javascript:toggleExpand('http-params','tp_http_transport')"&gt;&lt;span class="alt"&gt;---&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;
+
+        &lt;span&gt;Show Transport Info&lt;/span&gt;
+          &lt;/label&gt;
+
+
+
+    &lt;div id="http-params" class="extras" style="font-size:12px;padding-left:20px;display:none"&gt;
+        &lt;table&gt;&lt;tr&gt;
+            &lt;td class="testpage-input"&gt;HTTP Authentication
+            &lt;/td&gt;&lt;td class="testpage-input"&gt;&lt;input type="checkbox" class="testpage-checkbox" name="transport_enablement" style="font-size:12px; margin-left:10px"&gt; Enable
+            &lt;/td&gt;
+        &lt;/tr&gt;&lt;tr&gt;&lt;td&gt;
+            &lt;table&gt;&lt;tr&gt;&lt;td class="testpage-input"&gt;
+User Name&lt;/td&gt;&lt;td&gt;&lt;input class="testpage-input-box"
+                                                                                           type="text"
+                                                                                           name="form_user"/&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+                &lt;tr&gt;&lt;td class="testpage-input"&gt;
+Password&lt;/td&gt;&lt;td&gt;&lt;input class="testpage-input-box"
+                                                                                              type="password"
+                                                                                              name="form_password"/&gt;
+                &lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+
+
+        &lt;div id="soap-action" class="extras"&gt;
+            &lt;label&gt;
+                &amp;nbsp; SOAP Action &amp;nbsp;
+            &lt;/label&gt;
+        &lt;span id="testpage-soap-action" class="extras"&gt;
+            &lt;input class="testpage-input-box" type="text" id="soapAction" name="soapAction" size="35"/&gt;
+        &lt;/span&gt;
+           &lt;span&gt;&lt;input type="checkbox" class="testpage-checkbox" name="soapAction_cb" id="soapAction_cb"
+                   onclick="javascript:toggleDisabled(this, 'soapAction')" style="font-size:12px; margin-left:10px"/&gt; Enable&lt;/span&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;input type="hidden" name="security" value="true"/&gt;
+&lt;br/&gt;
+&lt;input align="right" name="invokeMessage" type="submit" value="Invoke" class="button"/&gt;&lt;div id="validation_error_message"&gt;&lt;/div&gt;
+&lt;/form&gt;
+&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;
+&lt;p&gt;&lt;font face="Arial" size="1"&gt;Copyright &amp;copy; 2003, 2011, Oracle and/or its affiliates. All rights reserved.&lt;/font&gt;&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;
+' (JSON::ParserError)</pre></div><div class="backtrace"><pre>./features/step_definitions/teste.rb:40:in `"me retorna o status 200 com o response body equivalente"'
+features/specs/teste.feature:9:in `Então me retorna o status 200 com o response body equivalente'</pre></div><pre class="ruby"><code><span class="linenum">38</span>	<span class="ident">expect</span><span class="punct">(</span><span class="attribute">@procurar_post</span><span class="punct">.</span><span class="ident">code</span><span class="punct">).</span><span class="ident">to</span> <span class="ident">eq</span> <span class="number">200</span>
+<span class="linenum">39</span>
+<span class="offending"><span class="linenum">40</span>  	<span class="attribute">@parse_post</span> <span class="punct">=</span> <span class="constant">JSON</span><span class="punct">.</span><span class="ident">parse</span><span class="punct">(</span><span class="attribute">@procurar_post</span><span class="punct">.</span><span class="ident">body</span><span class="punct">,</span> <span class="ident">object_class</span><span class="punct">:</span> <span class="constant">OpenStruct</span><span class="punct">)</span></span>
+<span class="linenum">41</span>  	<span class="ident">expect</span><span class="punct">(</span><span class="attribute">@parse_post</span><span class="punct">.</span><span class="ident">title</span><span class="punct">).</span><span class="ident">to</span> <span class="ident">eq</span> <span class="punct">&quot;</span><span class="string">qui est esse</span><span class="punct">&quot;</span></code></pre></li> <script type="text/javascript">moveProgressBar('100.0');</script></ol></div></div><script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0m0.680s seconds</strong>";</script><script type="text/javascript">document.getElementById('totals').innerHTML = "1 scenario (1 failed)<br />3 steps (1 failed, 2 passed)";</script></div></body></html>
