@@ -1,0 +1,11 @@
+local:
+  get_post: 
+
+
+# qa:
+#   get_post: 'https://jsonplaceholder.typicode.com/posts/<id>'
+qa:
+  get_post: 'http://ad-mercatto-hcp.infracommerce.com.br/soa-infra/services/default/CouponServices/CouponDuServices'
+
+prod:
+  get_post:
