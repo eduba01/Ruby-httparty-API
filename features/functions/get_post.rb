@@ -1,7 +1,6 @@
 def get_post()
 
   @id                    = "2"
-
 	endpoint               = $api['get_post']
   mount                  = endpoint.gsub("<id>", @id)
 

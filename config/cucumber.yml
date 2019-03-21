@@ -1,8 +1,8 @@
 base: --no-source --color --format pretty -p html_report
-default: --profile qa
+default: --profile hcp
 
 local: --profile base PROFILE=local 
-qa: --profile base PROFILE=qa
+hcp: --profile base PROFILE=hcp
 prod: --profile base PROFILE=prod
 
 html_report: --format progress --format html --out=report/features_report.html

@@ -1,11 +1,11 @@
 local:
   get_post: 
 
-
-# qa:
+# hcp:
 #   get_post: 'https://jsonplaceholder.typicode.com/posts/<id>'
-qa:
+hcp:
   storeId: 'malwee'
+  
   integracao_insert_order: 'isert_order_xml_payload'
   isert_order_xml_payload: '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ord="http://www.accurate.com/acec/OrderServices">
       <soapenv:Header/>
@@ -21,7 +21,6 @@ qa:
       </soapenv:Body>
    </soapenv:Envelope>'
 
-  storeId: 'malwee'
   integracao_insert_order: 'isert_order_xml_payload'
   isert_order_xml_payload: '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ord="http://www.accurate.com/acec/OrderServices">
       <soapenv:Header/>
@@ -37,7 +36,4 @@ qa:
       </soapenv:Body>
    </soapenv:Envelope>'
 
-
-
-prod:
-  get_post: ''
+ 
