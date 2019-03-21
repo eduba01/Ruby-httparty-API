@@ -5,6 +5,7 @@ def get_post()
 	endpoint               = $api['get_post']
   mount                  = endpoint.gsub("<id>", @id)
 
+  binding.pry
   @procurar_post = HTTParty.get(mount,:headers => {"Content-Type" => 'application/json'})
   puts "\n\nPRINTANDO ENPOINT\n\n"
   puts (mount)

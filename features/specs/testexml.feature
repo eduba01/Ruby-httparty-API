@@ -7,15 +7,14 @@
 		Para validar o status code e XML de resposta
 
 @positivo @regressao @EmAndamento12
-	Esquema do Cenário: WSDL POST like using Rest
-		Dado um WSDL request
-      Quando eu enviar parametros com o metodo post e texto com XML
-      | cep      | <cep>      |
-      | user     | <user>     |
-      | password | <password> |
-      Então o <status_code> deve retornar 200
- 
-    Exemplos:
-      | cep      | user   | password   | status_code |
-      | 04548005 | <user> | <password> | 200         | 
+	Cenário: Executar a integracao Insert Order
+		Dado que queira executar a integracao
+    Quando eu executar a insersão de pedidos "Insert Order"
+    Então o status_code deve retornar 200
+
+@positivo @regressao @EmAndamento12
+	Cenário: Executar a integracao Integrate Order
+		Dado que queira executar a integracao
+    Quando eu executar a integração de pedidos "Integrate Order"
+    Então o status_code deve retornar 200 
 

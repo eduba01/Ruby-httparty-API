@@ -5,7 +5,39 @@ local:
 # qa:
 #   get_post: 'https://jsonplaceholder.typicode.com/posts/<id>'
 qa:
-  get_post: 'http://ad-mercatto-hcp.infracommerce.com.br/soa-infra/services/default/CouponServices/CouponDuServices'
+  storeId: 'malwee'
+  integracao_insert_order: 'isert_order_xml_payload'
+  isert_order_xml_payload: '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ord="http://www.accurate.com/acec/OrderServices">
+      <soapenv:Header/>
+      <soapenv:Body>
+         <ord:insertOrderRequest>
+            <ord:range>
+               <ord:QT>10</ord:QT>
+               <ord:RI>01</ord:RI>
+               <ord:RF>99</ord:RF>
+            </ord:range>
+            <ord:storeId>MALWEE</ord:storeId>
+         </ord:insertOrderRequest>
+      </soapenv:Body>
+   </soapenv:Envelope>'
+
+  storeId: 'malwee'
+  integracao_insert_order: 'isert_order_xml_payload'
+  isert_order_xml_payload: '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ord="http://www.accurate.com/acec/OrderServices">
+      <soapenv:Header/>
+      <soapenv:Body>
+         <ord:insertOrderRequest>
+            <ord:range>
+               <ord:QT>10</ord:QT>
+               <ord:RI>01</ord:RI>
+               <ord:RF>99</ord:RF>
+            </ord:range>
+            <ord:storeId>MALWEE</ord:storeId>
+         </ord:insertOrderRequest>
+      </soapenv:Body>
+   </soapenv:Envelope>'
+
+
 
 prod:
-  get_post:
+  get_post: ''

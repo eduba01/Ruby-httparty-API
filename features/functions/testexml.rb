@@ -1,34 +1,42 @@
-def action(table)
-    @parameters = table.rows_hash
+class Integracoes 
+   require 'httparty'
+   require 'site_prism'
 
-    puts "\n Printing body \n"
-    puts "cupom_xml_payload: \n" + cupom_xml_payload
+   attr_accessor :storeId, :integracao, :endpoint
 
-endpoint    = $api['get_post']
+   def initialize()
+      @storeId = ($api['storeId'])
+      @integracao = integracao
+      @endpoint = endpoint
+   end
 
-@action = HTTParty.post(
-    endpoint,:headers => {"Content-Type" => 'text/xml;charset=UTF-8', "SOAPAction" => 'integrateCouponDu'},
-    :body => cupom_xml_payload
-    )
+   def action(integracao)
+      case integracao 
+         when "Insert Order"
+            puts integracao
+            @@endpoint = "http://ad-#{@storeId}-hcp.infracommerce.com.br/soa-infra/services/default/OrderServices/OrderServices"
+            #@@integracao = self.insert_order_xml_payload    
+            @@integracao = ($api['isert_order_xml_payload'])
+         when "Integrate Order"        
+            @@endpoint = @endpoint = "http://ad-#{@storeId}-hcp.infracommerce.com.br/soa-infra/services/default/OrderServices/OrderServices"
+           #@@integracao = self.insert_order_xml_payload    
+           @@integracao = ($api['isert_order_xml_payload'])
+      end
+      Integracoes.new.post
+   end
 
-#puts @action.code
-end
+   def post()        
+      puts @@endpoint
+      puts @@integracao
+        @@action = HTTParty.post(
+         @@endpoint,:headers => {"Content-Type" => 'text/xml;charset=UTF-8', "SOAPAction" => 'insertOrder'},
+        :body => @@integracao
+        )
+        puts "\n INSERT ORDER \n" + @@action.code.to_s
+        puts "\n INSERT ORDER \n" + @@action.body
+     end
 
-def cupom_xml_payload
-    '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:coup="http://www.accurate.com/acec/AcecSOAIntegration/CouponDuServices">
-    <soapenv:Header/>
-    <soapenv:Body>
-       <coup:integrateCouponDuRequest>
-          <coup:range>
-             <coup:QT>10</coup:QT>
-             <coup:RI>0</coup:RI>
-             <coup:RF>99</coup:RF>
-          </coup:range>
-          <!--Optional:-->
-          <coup:storeId>TRESC</coup:storeId>
-          <!--Optional:-->
-          <coup:couponId>?</coup:couponId>
-       </coup:integrateCouponDuRequest>
-    </soapenv:Body>
- </soapenv:Envelope>'
+     def getcode()
+       $code = @@action.code
+     end
 end

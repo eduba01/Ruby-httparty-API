@@ -3,23 +3,24 @@
 
 
 ##################### INICIO XML Teste XML ##########################################
-
-  Dado("um WSDL request") do
+  Dado("que queira executar a integracao") do
 	puts "\n ... \n"
   end
-  
-  Quando("eu enviar parametros com o metodo post e texto com XML") do |table|
-  # table is a Cucumber::MultilineArgument::DataTable
-	  action(table)
+ 
+  Quando("eu executar a insersão de pedidos {string}") do |integracao|
+	# table is a Cucumber::MultilineArgument::DataTable
+	Integracoes.new.action(integracao)
   end
-   
-  Então("o {int} deve retornar 200") do |status_code|
-	  puts "\n\nResposta do status code: " + @action.code.to_s
-	  puts ""
-	  puts "\n\nResposta do body: \n"
-	  puts @action.body
-	  @action.code.should be status_code
-	  #@action.code.should be 200
+  
+  Quando("eu executar a integração de pedidos {string}") do |integracao|
+	Integracoes.new.action(integracao)
+  end
+ 
+  Então("o status_code deve retornar 200") do 
+	  puts "\n\n Status code: \n"
+	  action = Integracoes.new.getcode()
+	  puts action
+	  action.should be 200
   end
   
   ##################### FIM XML Teste XML ##########################################
@@ -34,10 +35,10 @@ end
 
 
 Então("me retorna o status 200 com o response body equivalente") do
-
 	expect(@procurar_post.code).to eq 200
-
-  	@parse_post = JSON.parse(@procurar_post.body, object_class: OpenStruct)
+	binding.pry
+	@parse_post = JSON.parse(@procurar_post.body, object_class: OpenStruct)
+	binding.pry
   	expect(@parse_post.title).to eq "qui est esse"
 
   	puts "\n\nPRINTANDO O TITULO DO POST\n\n"
